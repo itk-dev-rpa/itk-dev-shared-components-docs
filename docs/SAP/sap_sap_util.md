@@ -14,7 +14,7 @@ parent: sap
     Args:
         container: A SAP GuiContainer object.
         max_depth: The maximum depth of the recursive search. Defaults to -1.
-        indent: The indentation level of the printed text. 
+        indent: The indentation level of the printed text.
                 This increases for each level of the recursion. Defaults to 0.
     
 ```

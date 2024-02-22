@@ -5,7 +5,7 @@ parent: sap
 ---
 
 ## run_with_session
-(session_index:int, func:Callable, args:tuple) -> None
+(session_index: int, func: Callable, args: tuple) -> None
 
 ```
     Run a function in a specific session based on the sessions index.
@@ -17,19 +17,26 @@ parent: sap
 ```
 
 ## run_batch
-(func:Callable, args:tuple[tuple], num_sessions=6) -> None
+(func: Callable, args: tuple[tuple]) -> None
 
 ```
     Run a function in parallel sessions.
-    The function will be run {num_sessions} times with args[i] as input.
+    A number of threads equal to the length of args will be spawned.
     The function must take a session object as its first argument.
     Note that this function will not spawn the sessions before running,
     use spawn_sessions to do that.
+
+    Args:
+        func: A callable function to run in the threads.
+        args: A tuple of tuples containing arguments to be passed to func.
+
+    Raises:
+        Exception: Any exception raised in any of the threads.
     
 ```
 
 ## run_batches
-(func:Callable, args:tuple[tuple], num_sessions=6) -> None
+(func: Callable, args: tuple[tuple], num_sessions: int = 6) -> None
 
 ```
     Run a function in parallel batches.
@@ -70,6 +77,15 @@ parent: sap
 
     Returns:
         tuple: A tuple of SAP GuiSession objects.
+    
+```
+
+## arrange_sessions
+()
+
+```
+    Take all toplevel windows of currently open SAP sessions
+    and arrange them equally on the screen.
     
 ```
 

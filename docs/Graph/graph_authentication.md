@@ -16,7 +16,7 @@ parent: graph
         password: The password of the user.
         client_id: The Graph API client id in 8-4-4-12 format.
         tenant_id: The Graph API tenant id in 8-4-4-12 format.
-    
+
     Returns:
         GraphAccess: The GraphAccess object used to authorize Graph access.
     

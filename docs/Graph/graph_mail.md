@@ -90,12 +90,12 @@ parent: graph
 ```
 
 ## move_email
-(email: Email, folder_path: str, graph_access: GraphAccess, *, well_known_folder: bool=False) -> None
+(email: Email, folder_path: str, graph_access: GraphAccess, *, well_known_folder: bool = False) -> None
 
 ```
     Move an email to another folder under the same user.
     If well_known_folder is true, the folder path is assumed to be a well defined folder.
-    See https://learn.microsoft.com/en-us/graph/api/resources/mailfolder?view=graph-rest-1.0 
+    See https://learn.microsoft.com/en-us/graph/api/resources/mailfolder?view=graph-rest-1.0
     for a list of well defined folder names.
 
     Args:
@@ -107,7 +107,7 @@ parent: graph
 ```
 
 ## delete_email
-(email: Email, graph_access: GraphAccess, *, permanent: bool=False) -> None
+(email: Email, graph_access: GraphAccess, *, permanent: bool = False) -> None
 
 ```
     Delete an email from the mailbox.
