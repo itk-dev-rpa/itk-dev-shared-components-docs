@@ -25,7 +25,7 @@ parent: sap
     Args:
         grid_view: A SAP GuiGridView object.
         pre_load: Whether to first scroll through the table to load all values.
-                  If a row hasn't been loaded before reading, the row data will be empty. 
+                  If a row hasn't been loaded before reading, the row data will be empty.
 
     Returns:
         tuple[tuple[str]]: A 2D tuple of all cell values in the gridview.
@@ -33,7 +33,7 @@ parent: sap
 ```
 
 ## get_row
-(grid_view, row:int, scroll_to_row=False) -> tuple[str]
+(grid_view, row: int, scroll_to_row=False) -> tuple[str]
 
 ```
     Returns the data of a single row.
@@ -42,7 +42,7 @@ parent: sap
         grid_view: A SAP GuiGridView object.
         row: The zero-based index of the row.
         scroll_to_row: Whether to scroll to the row before reading the data.
-                       This ensures the data of the row has been loaded before reading. 
+                       This ensures the data of the row has been loaded before reading.
 
     Returns:
         tuple[str]: A tuple of the row's data.
@@ -50,7 +50,7 @@ parent: sap
 ```
 
 ## iterate_rows
-(grid_view) -> tuple[str]
+(grid_view) -> Iterator[tuple[str]]
 
 ```
     This generator yields each row of the table in order.
@@ -82,7 +82,7 @@ parent: sap
 ```
 
 ## find_row_index_by_value
-(grid_view, column:str, value:str) -> int
+(grid_view, column: str, value: str) -> int
 
 ```
     Find the index of the first row where the given column's value
@@ -102,7 +102,7 @@ parent: sap
 ```
 
 ## find_all_row_indices_by_value
-(grid_view, column:str, value:str) -> list[int]
+(grid_view, column: str, value: str) -> list[int]
 
 ```
     Find all indices of the rows where the given column's value
